@@ -1,0 +1,1 @@
+- [Mobile Nest boundaries](mobile-nest-first-build.md) — keep guest checkout public and never fake success for unconfigured mobile payments.

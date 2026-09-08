@@ -1,6 +1,6 @@
-# [Project name]
+# Mobile Nest BD
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+Mobile-first Bangladesh e-commerce for mobile accessories, with guest checkout, order tracking, and a Clerk-protected shop admin.
 
 ## Run & Operate
 
@@ -22,15 +22,21 @@ _Replace the heading above with the project's name, and this line with one sente
 
 ## Where things live
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+- `artifacts/mobile-nest-bd/` — public storefront, checkout, order tracking, and admin UI
+- `artifacts/api-server/src/routes/` — Express API routes for storefront, orders, and admin
+- `lib/api-spec/openapi.yaml` — source of truth for API contracts and generated hooks
+- `lib/db/src/schema/` — Drizzle schema for categories, products, and orders
 
 ## Architecture decisions
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+- Customer browsing, checkout, confirmation, and tracking are public; only admin routes require Clerk.
+- Online payment choices are recorded as pending setup until a verified provider flow exists.
+- Order line items are snapshotted in the order record so confirmations and tracking remain stable after product edits.
+- The first catalog is seeded on API startup only when the database is empty.
 
 ## Product
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+Customers can browse and filter demo accessories, add items to a persistent cart, check out without creating an account, receive a unique `MNX-*` order ID, and track an order with the ID plus mobile number. Shop staff can review order metrics, update status, manage products, and manage categories after signing in with Clerk.
 
 ## User preferences
 

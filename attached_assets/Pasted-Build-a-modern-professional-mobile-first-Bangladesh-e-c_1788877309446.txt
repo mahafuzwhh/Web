@@ -1,0 +1,121 @@
+Build a modern, professional, mobile-first Bangladesh e-commerce website for mobile accessories.
+
+Products:
+Button Phone, Charger, Data Cable, Earphone, TWS Earbuds, Headphone, Bluetooth Speaker/Sound Box and other accessories.
+
+Customer Side
+
+- Modern digital UI
+- Homepage with banner, categories, best sellers, new arrivals and offers
+- Product search and category filter
+- Product details with images, price, discount and stock
+- Add to Cart / Buy Now
+- Mobile-friendly checkout
+- Customer can order WITHOUT login
+
+Checkout
+
+Collect:
+
+- Name
+- Mobile number
+- WhatsApp number (optional)
+- District
+- Upazila
+- Post Office
+- Village
+- House No
+- Additional address
+
+Delivery charge: ৳150 nationwide.
+
+Show:
+Subtotal + Delivery ৳150 = Total.
+
+Payment
+
+Prepare payment system for:
+
+- bKash
+- Nagad
+- Rocket
+
+For now, use a safe payment placeholder/configuration. Do not fake successful payment and never expose secret/API keys.
+
+Orders
+
+After checkout, generate a unique Order ID such as:
+MNX-482731
+
+Show the Order ID on the confirmation page and tell the customer to save it.
+
+Create a Track Order page where customers enter:
+
+- Order ID
+- Mobile number
+
+Then show their order status:
+Pending → Confirmed → Processing → Shipped → Delivered
+
+Also support Cancelled.
+
+Add Call and WhatsApp support buttons. WhatsApp message should automatically include the Order ID.
+
+Admin
+
+Create a secure Admin Login and Admin Dashboard.
+
+Admin can:
+
+- View all orders
+- View customer information and complete delivery address
+- View payment method/status
+- Change order status
+- Add/edit/delete products
+- Change price
+- Set discounts
+- Update stock
+- Mark products out of stock
+- Manage categories
+- Manage offers
+
+Dashboard should show:
+
+- Total orders
+- Pending orders
+- Delivered orders
+- Total sales
+- Low-stock products
+- Out-of-stock products
+
+Database
+
+Use a proper database for products, orders, payments, categories and offers.
+
+Ads
+
+Allow limited advertisements in suitable locations. No intrusive popups or excessive ads.
+
+Security
+
+Protect admin pages and customer order information. Order tracking must require both Order ID and mobile number.
+
+Use environment variables for sensitive credentials.
+
+Design
+
+Make it:
+
+- Modern
+- Professional
+- Fast
+- Mobile-first
+- Android friendly
+- Clean
+- Easy to navigate
+
+Do not add customer registration/login in this version.
+
+Use demo products/data so I can test the website immediately.
+
+Before finishing, test the cart, checkout, order creation, Order ID, order tracking, admin dashboard, product management and mobile responsiveness. Fix errors.

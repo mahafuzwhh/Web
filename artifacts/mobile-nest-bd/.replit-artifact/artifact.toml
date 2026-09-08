@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Mobile Nest BD"
+description = "A mobile-first Bangladesh e-commerce storefront for phones, chargers, cables, earbuds, speakers, and everyday mobile accessories, with guest checkout, order tracking, and an admin workspace."
+version = "1.0.0"
+id = "artifacts/mobile-nest-bd"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 19415
+
+[services.development]
+run = "pnpm --filter @workspace/mobile-nest-bd run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/mobile-nest-bd", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/mobile-nest-bd/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "19415"
+BASE_PATH = "/"
