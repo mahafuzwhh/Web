@@ -40,8 +40,8 @@ jobs:
       - name: Build website
         run: pnpm --filter @workspace/mockup-sandbox... run build
         env:
-          PORT: 5173
-          BASE_PATH: /
+         PORT: 5173
+         BASE_PATH: /Web/
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
